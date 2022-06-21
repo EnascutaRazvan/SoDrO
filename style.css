@@ -1,12 +1,24 @@
 @font-face {
+    font-family: "BebasNeuePro-Book";
+    src: url("assets/fonts/BebasNeuePro-Book.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeuePro-Middle";
+    src: url("assets/fonts/BebasNeuePro-Middle.ttf");
+}
+
+
+@font-face {
     font-family: "BebasNeuePro-Regular";
     src: url("assets/fonts/BebasNeuePro-Regular.ttf");
 }
 
 @font-face {
-    font-family: "BebasNeuePro-Book";
-    src: url("assets/fonts/BebasNeuePro-Book.ttf");
+    font-family: "BebasNeuePro-Bold";
+    src: url("assets/fonts/BebasNeuePro-Bold.ttf");
 }
+
 
 @font-face {
     font-family: "BarlowCondensed-Bold";
@@ -16,11 +28,13 @@
 :root {
     --black: #23262d;
     --light-black: #3c3c3c;
+    --gray: #b3b3b3;
     --orange: #fa9863;
     --light-orange: #FBB188;
     --orange-after: #ffc3a3;
     --purple: #42134D;
     --light-purple: #5a3292;
+    --lighter-purple: #784494;
 }
 
 h1 {
@@ -197,6 +211,9 @@ body {
 
 
 
+
+
+
 /*----------------------------------------------------*/
 /* Home Page */
 
@@ -247,6 +264,137 @@ body {
         font-size: 40px;
     }
 }
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* Statistics */
+
+
+html,
+body,
+#statistics-pie {
+    margin-top: 100px;
+    height: 400px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+
+#statistics-pie-mobile {
+    display: none;
+}
+
+
+@media (max-width:799px) {
+    #statistics-pie {
+        display: none;
+    }
+
+    #statistics-pie-mobile {
+        display: flex;
+        margin-top: 100px;
+        height: 400px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+
+    }
+}
+
+#statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#statistics h1 {
+    position: relative;
+    padding-top: 3%;
+    line-height: 120%;
+    font-family: "BarlowCondensed-Bold";
+    font-size: 60px;
+    text-align: center;
+    color: var(--orange);
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+#statistics h3 {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: start;
+    font-size: 40px;
+    font-family: "BebasNeuePro-Book";
+    font-weight: 100;
+
+
+    width: 70%;
+    z-index: 2;
+
+}
+
+#statistics .statistics-img {
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+#statistics hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+#statistics #SVGorCSV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+
+#statistics .statistics-button {
+    padding: 0.1em 1.5em;
+    border-radius: 2em 2em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+
+    font-family: "BebasNeuePro-Bold";
+    font-size: 40px;
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+#statistics .statistics-button:hover {
+    background: linear-gradient(254deg, rgba(243, 207, 115, 1) 0%, rgba(232, 119, 174, 1) 100%);
+}
+
+
+
+
 
 
 
@@ -337,13 +485,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    position: sticky;
+
 
     top: 0;
     left: 0;
     padding: 20px 80px;
 
     background-color: var(--light-orange);
+    width: 100%;
 
     z-index: 999;
 }
@@ -354,17 +503,22 @@ body {
     margin-right: 30px;
 }
 
+#register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #signin-form {
     user-select: none;
     pointer-events: none;
 
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
     height: 700px;
     width: clamp(500px, 50%, 600px);
@@ -373,11 +527,72 @@ body {
     border-radius: 50px 50px 50px 50px;
     background-color: #FBB188;
 
+
 }
 
 #signin-form .angle2 {
     display: none;
 }
+
+#signin-form [type='text'],
+[type='password'] {
+    margin-top: 40px;
+    padding: 10px;
+    padding-left: 20px;
+    width: 350px;
+    box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.47);
+    border-radius: 10px;
+    border-color: transparent;
+
+    font-size: 27px;
+    color: var(--gray);
+}
+
+#signin-form [type='text']::placeholder,
+[type='password']::placeholder {
+    color: var(--gray);
+}
+
+#signin-form [type='checkbox'] {
+    position: relative;
+    cursor: pointer;
+    box-shadow: none;
+    width: 20px;
+    height: 30px;
+}
+
+#signin-form #signin-buttons {
+    margin-top: 60px;
+    margin-bottom: 25px;
+
+}
+
+#signin-form .signin-button {
+    padding: 4px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+
+    font-family: "BebasNeuePro-Bold";
+    font-size: 27px;
+    text-align: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#signin-form .register {
+    padding: 4px 20px;
+    background: var(--lighter-purple);
+}
+
+#signin-form .login {
+    background: #FFFFFF;
+    color: var(--lighter-purple);
+}
+
+
 
 
 
