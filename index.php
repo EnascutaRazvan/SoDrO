@@ -1,3 +1,23 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+if($user_data)
+echo "Hello ".$user_data['username'];
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +36,11 @@
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="home.html">Home</a></li>
-                <li><a href="drinks.html">Drinks</a></li>
-                <li><a href="statistics.html">Statistics</a></li>
-                <li><a href="about-us.html">About-us</a></li>
-                <a href="Register.html" class="signIn">Sign in</a>
+                <li><a class="active" href="index.php">Home</a></li>
+                <li><a href="drinks.php">Drinks</a></li>
+                <li><a href="statistics.php">Statistics</a></li>
+                <li><a href="about-us.php">About-us</a></li>
+                <a href="register.php" class="signIn">Sign in</a>
             </ul>
         </div>
         <div id="mobile">

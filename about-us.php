@@ -16,11 +16,11 @@
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="drinks.html">Drinks</a></li>
-                <li><a href="statistics.html">Statistics</a></li>
-                <li><a class="active" href="about-us.html">About-us</a></li>
-                <a href="Register.html" class="signIn">Sign in</a>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="drinks.php">Drinks</a></li>
+                <li><a href="statistics.php">Statistics</a></li>
+                <li><a class="active" href="about-us.php">About-us</a></li>
+                <a href="register.php" class="signIn">Sign in</a>
             </ul>
         </div>
         <div id="mobile">

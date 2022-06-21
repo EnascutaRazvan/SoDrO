@@ -1,3 +1,27 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+if($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    session_destroy();
+    header("Location: index.php");
+    die;
+}
+
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,9 +30,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <title>SoDrO</title>
-    <script src="assets/scripts/anychart-core.min.js"></script>
-    <script src="assets/scripts/statistics-pie.js"></script>
-    <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/icons/css/font-awesome.min.css">
 </head>
@@ -19,11 +40,13 @@
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="drinks.html">Drinks</a></li>
-                <li><a class="active" href="statistics.html">Statistics</a></li>
-                <li><a href="about-us.html">About-us</a></li>
-                <a href="Register.html" class="signIn">Sign in</a>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="drinks.php">Drinks</a></li>
+                <li><a href="statistics.php">Statistics</a></li>
+                <li><a href="about-us.php">About-us</a></li>
+                <form class = "logoutbtn" action = "indexLogged.php" method="post">
+                <input type="submit" class="logoutbtn" name="logout" value="logout" />
+                </form>
             </ul>
         </div>
         <div id="mobile">
@@ -31,29 +54,14 @@
             <i id="bar" class="fa fa-list-ul fa-lg" aria-hidden="true" onclick="menu()"></i>
         </div>
     </section>
-    <section id="statistics">
-        <h1>STATISTICS</h1>
-        <div id="statistics-pie"></div>
-        <div id="statistics-pie-mobile"></div>
-        <hr>
-        <h3>Download the <span style="font-family:default">data</span></h3>
-        <h3><span style="display: inline-block;
-            margin-left: 130px;"></span>In two different <span style="font-family:default">formats</span></h3>
 
-        <div id="SVGorCSV">
-            <a href="Register.html" class="statistics-button">SVG</a>
-            <a href="Register.html" class="statistics-button">CSV</a>
-        </div>
-
+    <section id="hero">
+        <img class="soda" src="assets/img/sodro-soda.png" alt="Soda">
+        <h1>ORGANISE YOUR DRINKS</h1>
+        <h1 style="color:var(--light-purple)">THE SMART WAY</h1>
     </section>
 
-
-    <script>
-
-
-    </script>
-
-    <footer class="section-p1">
+    <footer style="margin-top: 500px;">
         <div class="qr-code col">
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
@@ -77,6 +85,4 @@
         </div>
 
     </footer>
-
-
 </body>
