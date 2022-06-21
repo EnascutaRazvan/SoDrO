@@ -35,6 +35,7 @@
     --purple: #42134D;
     --light-purple: #5a3292;
     --lighter-purple: #784494;
+    --lightest-purple: rgb(159, 98, 192);
 }
 
 h1 {
@@ -511,7 +512,6 @@ body,
 
 #signin-form {
     user-select: none;
-    pointer-events: none;
 
     margin-top: 70px;
 
@@ -520,12 +520,13 @@ body,
     align-items: center;
 
 
-    height: 700px;
+    height: 800px;
     width: clamp(500px, 50%, 600px);
     z-index: 0;
 
     border-radius: 50px 50px 50px 50px;
     background-color: #FBB188;
+    margin-bottom: 100px;
 
 
 }
@@ -587,9 +588,85 @@ body,
     background: var(--lighter-purple);
 }
 
+#signin-form .register:hover {
+    background: var(--lightest-purple);
+}
+
+#signin-form .register2 {
+    padding: 4px 20px;
+    background: #FFFFFF;
+    color: var(--lighter-purple);
+}
+
+#signin-form .register2:hover {
+    background: #f8f4ff;
+}
+
 #signin-form .login {
     background: #FFFFFF;
     color: var(--lighter-purple);
+}
+
+#signin-form .login:hover {
+    background: #f8f4ff;
+}
+
+#signin-form .login2 {
+    background: var(--lighter-purple);
+}
+
+#signin-form .login2:hover {
+    background: var(--lightest-purple);
+}
+
+#signin-form p {
+    font-size: 25px;
+    text-align: center;
+    font-family: "BebasNeuePro-Middle";
+    margin-top: 40px;
+    margin-bottom: -px;
+}
+
+#signin-form #create-account-button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: var(--lighter-purple);
+    border-color: transparent;
+
+    font-family: "BebasNeuePro-Regular";
+    font-size: 27px;
+    height: 60px;
+    text-align: center;
+}
+
+#signin-form #create-account-button:hover {
+    background: var(--lightest-purple);
+}
+
+#signin-form #login-button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: var(--lighter-purple);
+    border-color: transparent;
+
+    font-family: "BebasNeuePro-Regular";
+    font-size: 27px;
+    height: 60px;
+    text-align: center;
+}
+
+#signin-form #login-button:hover {
+    background: var(--lightest-purple);
 }
 
 
