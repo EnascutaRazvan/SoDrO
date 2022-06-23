@@ -11,8 +11,8 @@ session_start();
         // something was posted
 
         $username = $_POST['username'];
-        $password = $_POST['password'];
-        $password2 = $_POST['password-repeat'];
+        $password = hash("sha256",$_POST['password']);
+        $password2 = hash("sha256",$_POST['password-repeat']);
         $email = $_POST['email'];
         $email2 = $_POST['email-repeat'];
 
@@ -20,7 +20,9 @@ session_start();
             // save to database
             $user_id = random_num(20);
             $query = "insert into users (user_id, username,email,password) values ('$user_id', '$username','$email','$password')";
-            mysqli_query($con, $query);
+            $database = new connectionDB("localhost","root","","sodrodatabase");
+            $result = mysqli_query($database->con,$query);
+    
 
             header("Location: login.php");
             die;

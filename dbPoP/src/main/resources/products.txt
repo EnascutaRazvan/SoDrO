@@ -1,0 +1,152 @@
+TEA (name@price@quantity@category@ingredients@ countries@stores@)1.https://world.openfoodfacts.org/product/0613008730734/original-green-tea-with-honey-arizona
+Original Green Tea with Honey - Arizona - 500 ml@5$@500 ml@Tea@water, sugar, honey (0,18%), green tea extract (0,14%), natural flavouring, antioxidant: ascorbic acid, acidificante: citric acidificante, ginseng flavouring@Australia, Austria, Belgium, France, French Polynesia, Luxembourg, Switzerland@Auchan, Leclerc, Metro, Carrefour, Colruyt, Delhaize, Woolworths@
+2. https://world.openfoodfacts.org/product/5449000030528/peach-nestea
+Peach - Nestea - 1,5 L@3$@1,5L@Tea@water, sugar, acidifiers: citric acid, sodium citrate, malic acid, natural peach aromas and tea with other natural flavours, tea extracts, white peach juice based on concentrate (0.1%), antioxidant: ascorbic acid, sweetener: steviol glycosides@France, Serbia, Switzerland@Carrefour@
+3. https://world.openfoodfacts.org/product/4801981120369/real-leaf-honey-lemon-green-tea-the-coca-cola-company
+Real Leaf Honey Lemon Green Tea - 480ml@2$@480ml@Tea@Water, Sugar,Acidulant (Citric Acid), Natural, Nature-Identical and Artificial Flavors, Browed Tea from Groen Tea Laaves, Acidity regulator (Sodium Citrate), Preservative (Ascorbic Acld), Caramel Color, Sweoteners (Sucralose, Acesulfame-K), Honey@Philippines@Puregold@
+4. https://world.openfoodfacts.org/product/0818143010011/citrus-mint-green-tea-gizmo-beverages-llc
+Citrus Mint Green Tea - Gizmo Beverages Llc@2$@473ml@Tea@Water, brewed green tea, natural flavor, citric acid, monk fruit, reb-a (stevia), ascorbic acid (vitamin c)@United States@@
+5. https://world.openfoodfacts.org/product/0613008738495/green-tea-arizona
+Green Tea - Arizona@5$@695ml@Tea@Premium brewed green tea using filtered water, high fructose corn syrup (glucose-fructose syrup), honey, citric acid, natural flavors, ascorbic acid (vitamin c), ginseng extract@United States@@
+6. https://world.openfoodfacts.org/product/0813694023893/narino-peach-tea-bai
+Narino peach tea – Bai@3$@530ml@Tea@Brewed tea (filtered water, tea), erythritol, peach juice concentrate, citric acid, natural flavors, coffeefruit extract, ascorbic acid (vitamin c), stevia leaf extract, white tea extract, malic acid, sodium citrate@United States@@
+7. https://world.openfoodfacts.org/product/0613008732288/half-half-iced-tea-lemanade-raspberry-arizona
+Half Half Iced Tea Lemanade, Raspberry - Arizona@3$@591ml@Tea@Premium black tea using filtered water, high fructose corn syrup (glucose-fructose syrup), lemon juice from concentrate, pear juice from concentrate, natural flavors, citric acid, ascorbic acid (vitamin c), sucralose (splenda brand), acesulfame potassium@United States@@
+8. https://world.openfoodfacts.org/product/0076545001024/lemonade-tea-cooler-dean-foods-company
+Lemonade Tea Cooler - Dean Foods Company@4$@473ml@Tea@Water, sugar, lemon juice concentrate, citric acid, maltodextrin, tea, lemon pulp, sodium citrate, lemon juice solids, natural flavors@United States@@
+9. https://world.openfoodfacts.org/product/0858148003076/ashwagandha-chai-with-coconut-milk-rebbl
+Ashwagandha Chai With Coconut Milk - Rebbl@5$@354ml@Tea@Organic assam tea (brewed assam*, water), organic coconut-milk (water, organic coconut creme), organic coconut sugar, organic spice extracts (ginger*, cinnamon*, cardamom*. nutmeg*, clove*, black pepper*) organic ashwagandha extract (ksm-66), organic vanilla extract, organic quillaja extract, pink salt, organic stevia extract@United States@@
+10. https://world.openfoodfacts.org/product/0083900005979/iced-tea-gold-peak-tea
+Iced tea - Gold Peak Tea@6$@547ml@Tea@filtered water, brewed tea concentrate, sugar, natural flavors, citric acid, ascorbic acid@France, United States@@
+11. https://world.openfoodfacts.org/product/0613008722869/black-white-iced-tea-with-ginseng-honey-ferolito-vultaggio-sons
+Black White Iced Tea with Ginseng Honey@3$@500ml@Tea@Premium brewed black and white teas using filtered water, sugar, natural flavors, phosphoric acid, honey, vitamin c, panax ginseng@France, United States@@
+12. https://world.openfoodfacts.org/product/7350103620234/refreshing-ice-tea-lemon-flavor-general-trading
+Refreshing Ice Tea - Lemon Flavor - general Trading - 330 ml@1.5$@330ml@Tea@Water, sugar, acid: citric acid, lemon juice from concentrated juice (1%), extract: black tea extract (0,1%); flavouring, acidity regulator: sodium citrate; antioxidant: ascorbic acid@Denmark, Sweden@Kiosker, Dollarstore, Hemköp@
+13. https://world.openfoodfacts.org/product/8888196454713/ice-blueberry-tea-pokka
+Ice Blueberry Tea - Pokka - 250 ml@1.99$@250ml@Tea@Water, freshly brewed black tea, fructose, sucrose, blueberry juice, flavourings, citric acid, caramel, sodium citrate, ascorbic acid@Singapore@
+14. https://world.openfoodfacts.org/product/8712100886003/sparkling-ice-tea-lipton
+Sparkling Ice Tea - Lipton - 330 ml@2.29$@330ml@Tea@Water, sugar, carbon dioxide, black tea extract (1.4 g / l), acidifier (malic acid, citric acid), acidity regulator (E331), flavorings, sweeteners (steviol glycosides)@Switzerland@
+15. https://world.openfoodfacts.org/product/0613008719302/half-half-iced-tea-arizona
+Half half iced tea - Arizona@4.30$@680ml@Tea@Premium brewed blend of black teas using filtered water, high fructose corn syrup (glucose-fructose syrup), lemon juice from concentrate, pear juice from concentrate, citric acid, ascorbic acid (vitamin c), natural flavors, sucralose (splenda brand), acesulfame potassium, gum acacia@France, United States@
+Water (name@price@quantity@category@ingredients@ countries@stores@)
+1. https://world.openfoodfacts.org/product/7613035833272/perrier
+Perrier - 1L@10$@1L@Water@Mineral water natural enhanced gas@Belgium, China, France, Germany, Réunion, Switzerland@
+2. https://world.openfoodfacts.org/product/3068320014067/evian-water
+Evian Water - 750 ml@1.59$@750ml@Water@Natural mineral water@Australia, France, Switzerland, United Kingdom@Coop, Migros, Kiosk, Woolworths, Coles@
+3. https://world.openfoodfacts.org/product/3468570116601/rozana
+Rozana - 1 L@2.09$@1L@Water@Water@France, French Polynesia, New Caledonia, Réunion@Super U, Carrefour, Auchan, Intermarché, Leclerc, E.Leclerc@
+4. https://world.openfoodfacts.org/product/5942219111113/borsec-still-mineral-water-apa-minerala-plata-romaqua-group
+Borsec - Still Mineral Water 2L@0.99$@2L@Water@Water@Romania@Kaufland, Carrefour, Megaimage@
+5. https://world.openfoodfacts.org/product/8410749001107/agua-mineral-natural-con-gas-vichy-catalan
+Agua mineral natural con gas - Vichy Catalan - 1 l@2.99$@1L@Water@natural mineral water, carbon dioxide@Spain@OpenCor@
+6. https://world.openfoodfacts.org/product/5942325000066/apa-plata-bucovina
+Bucovina - 0.5@1.49$@500ml@Water@Water@Romania@Kaufland, Carrefour, Megaimage@
+7. https://world.openfoodfacts.org/product/8850367993444/agua-de-coco-100-natural-chaokoh
+Agua de coco 100% natural - Chaokoh - 330 ml@1.99$@330ml@Water@Coconut@Spain@Mercadona@
+8. https://world.openfoodfacts.org/product/42376064/mineralwasser-saskia
+Mineralwasser - Saskia - 1,5l@0.99$@1.5L@Water@Carbonic Acid@Germany@Lidl@
+9. https://world.openfoodfacts.org/product/3068320114453/badoit
+Badoit - 1 L@0.49$@1L@Water@Mineral water, carbon dioxide gas@Belgium, France, Netherlands, Switzerland@Dia, Carrefour, Bi1, carrefour.fr@
+10. https://world.openfoodfacts.org/product/5902078000201/water-cisowianka
+Water - Cisowianka - 1.5 l@1.25$@1.5 l@Water@General mineralisation: 742 mg/l, ph 7 neutral catenions in mg/l: best position: date on the pass 130.3 21.9 11.0 calcium ca2 magnesium mg2* sodium na* anions in mg/l: hydrogen-cell hco3 539.1 fluoride f undissociated ingredient in mg/l: silica sio2 22.1@Poland@PV-EURO-MARKET@
+11. https://world.openfoodfacts.org/product/20082925/coconut-water-vitasia
+Coconut Water - Vitasia - 500 ml@4.69$@500 ml@Water@100% coconut water@Italy, Spain@Lidl@
+12. https://world.openfoodfacts.org/product/5942326400568/aqua-carpatica-plata-1l
+Aqua Carpatica Plata 1L@0.79$@1 L@Water@TYPICAL ANALYSIS* Calcium (Ca) Magnesium (Mg) Sodium (Na) Nitrate (NO3) Bicarbonates (HCO3) 2 pH (22°C): Dry residue (180°C)@France, Romania@ Kaufland, Carrefour, Megaimage,Auchan@
+13. https://world.openfoodfacts.org/product/6191599900032/palma
+PaLma - 2 l@1.59$@2 l@Water@Natural mineral water@Tunisia@Carrefour@
+14. https://world.openfoodfacts.org/product/0682430611744/voss-artesian-water
+VOSS Artesian Water - 800ml@25$@800ml@Water@Artesian Water@Australia, Spain@Woolworths@
+15. https://world.openfoodfacts.org/product/0016229917593/foco-coconut-water
+Foco, coconut water - 330 ml@3.59$@330 ml@Water@100% natural coconut water.@France, Switzerland, United States@Amazon@
+Energy Drink (name@price@quantity@category@ingredients@ countries@stores@)
+1. https://world.openfoodfacts.org/product/9002490205973/energy-drink-red-bull
+Energy drink - RED BULL - 250 ml@1.79$@250 ml@Energy Drink@carbonated water, sucrose, glucose, acidifier (citric acid), taurine (0.4%), acidity correctors (sodium citrate, magnesium carbonate), caffeine (0.02%), vitamins (niacin, pantothenic acid, b6, b12), flavors, colors (caramel, riboflavin)@Spain, Alemania, Bélgica, Francia, Suiza@Monoprix, Magasins U, Carrefour, MegaImage, Auchan, Lidl@
+2. https://world.openfoodfacts.org/product/90162800/red-bull-sugar-free
+Red Bull Sugar Free - 250ml@1.5$@250ml@Energy Drink@water, acid (citric acid), carbon dioxide, taurine (0,4%), acidity regulators (sodium carbonates, magnesium carbonates), sweeteners (acesulfame k, aspartame), caffeine (0,03%), vitamins (niacin nlathenic acid, b6, b12), flavourings, thickener xanthan gum), colours (plain caramel, riboflavin) contiains a source of phenylanine@Australia, Austria, Belgium, France, Germany, Ireland, Italy, Spain, Switzerland, United Kingdom@Centra, Woolworths, Monoprix, Magasins U, Carrefour, MegaImage, Auchan, Lidl@
+3. https://world.openfoodfacts.org/product/5060335632302/monster-energy
+Monster Energy - 500 ml@2$@500 ml@Energy Drink@carbonated water, sugar, glucose syrup, acidifier (citric acid), flavourings, taurine 0,4%, corrector of acidity (sodium citrate), extract of ginseng root was 0.08%, l-tartrate, l-carnitine 0,04, preservatives (ascorbic acid, benzoic acid), caffeine was 0.02%, colouring (e163), vitamins (b2, b3, b6, b12), sweetener (sucralose), sodium chloride, d-glucuronolactone (contains extract of glutamate pork), guarana seed extract 0,002%, inositol@Spain, Bélgica, Francia, Guadalupe@Monoprix, Leader Price, Magasins U, Carrefour, Auchan, Epiceries, carrefour.fr@
+4. https://world.openfoodfacts.org/product/42117469/powerade-ion4-blood-orange
+Powerade Ion4 Blood Orange - 500 ml@7$@500ml@Energy Drink@Water, dextrose, fructose, acidulant, citric acid, sodium chloride, acidity regulators potassium citrate, magnesium chloride, calcium chloride and potassium phosphate, antioxidant ascorbic acid, acesulfame-K sweetener and sucralose, flavoring, lycopene dye (contains soy lecithin) and carotenes. Keep cool and dry@France, Switzerland@Italie@
+5. https://world.openfoodfacts.org/product/8710398521743/rockstar-energy-drink-xdurance-gout-myrtille-grenade-acai-50-cl
+Rockstar Energy Drink 500ml@3$@500ml@Energy Drink@sparkling water,sugar,flavor enhancer (erythritol),concentrated black carrot juice,acidifiers (citric acid, lactic acid, malic acid),flavoring,thickener (pectins),caffeine (0.03%),sweeteners (sucralose, acesulfame-k),taurine (0.02%),acidity regulator (potassium phosphates),guarana extract (0.01%),vitamins (niacin, e, b6),antioxidant (ascorbic acid)@Belgium, France@carrefour.fr@
+
+
+6. https://world.openfoodfacts.org/product/7610845668582/e-drink-energy-taste-coop-prix-garantie
+E-Drink Energy-Taste - Coop Prix Garantie - 250 ml@2.5$@250ml@Energy Drink@water, acidifier (e 330), carbon dioxide, taurine (400mg/100ml), acidity corrector (e 331) aroma, caffeine, dye (e 150c), sweeteners (e 950, e 951), inositol, vitamin (niacin, b2, b6, b12)@France, Switzerland@
+7. https://world.openfoodfacts.org/product/0786162080004/energy-water-tropical-vitaminwater
+Energy water, tropical - VitaminWater@1.7$@591ml@Energy Drink@Reverse osmosis water, crystalline fructose, cane sugar, less than 0.5% of: natural flavors, vitamin c (ascorbic acid), citric acid, gum acacia, magnesium lactate and calcium lactate and potassium phosphate (electrolyte sources), caffeine, vitamin b3 (niacinamide), glycerol ester of rosin, guarana seed extract, vitamin b5 (calcium pantothenate), vitamin b6 (pyridoxine hydrochloride), beta-carotene (color), vitamin b12 (cyanocobalamin)@United States@
+8. https://world.openfoodfacts.org/product/5056079900272/energy-original-boost
+Energy Original - Boost - 250ml@4$@250ml@Energy Drink@Carbonated Water,1 Sugar,Glucose-Fructose Syrup, Add (Citric Acid), Taurine (0.4%), Flavourings,Caffeine (0.03%), Sweeteners (Aspartame, Acesulfame K), Colours (Ammonia Caramel, Riboflavin), Acidity Regulator (Sodium Citrate), Inosltol, Preservative (Sodium Benzoate), Vitamins (Niadn, Pantothenkc Acd, Vitamin B6, Vitamin B12)@Ireland@Tesco@
+9. https://world.openfoodfacts.org/product/0012000180606/amp-game-fuel-mtn-dew
+Amp game fuel - Mtn Dew@50$@473ml@Energy Drink@Carbonated water, high fructose corn syrup, white grape juice concentrate, citric acid, sodium polyphosphates (to protect flavor), natural flavor, l-theanine, gum arabic, sodium benzoate (preserves freshness), caffeine, acesulfame potassium, sucralose, yellow 5, glycerol ester of rosin, calcium disodium edta (to protect flavor), niacinamide, panax ginseng root extract, sucrose acetate isobutyrate, calcium pantothenate, yerba mate extract, yellow 6, beta carotene (vitamin a), pyridoxine hydrochloride (vitamin b6)@United States@
+10. https://world.openfoodfacts.org/product/9415767010338/v-blue
+V Blue - 275ml@2.25$@275ml@Energy Drink@carbonated water, sugar, acidity regulators (citric acid, sodium citrate), taurine, guarana extract (0,12%), to flavours, preservatives (sodium us benzoate, potassium sorbate), for caffeine, glucuronolactone, colour (caramel iv), vitamins nuth (niacin (b3), pantothenic acid (b5), serv serv b6, riboflavin (b2), b12), antioxidant (ascorbic acid)@New Zealand@
+11. https://world.openfoodfacts.org/product/0025713919609/original-mental-physical-energy-drink-supplement-uptime
+Mental Physical Energy Drink Supplement - Uptime@12$@355ml@Energy Drink@Filtered carbonated water, cane sugar, natural flavors, citric acid, calcium citrate, natural caffeine, potassium benzoate (preservative), potassium sorbate (preservative), l-theanine, ascorbic acid, panax ginseng root extract, angelica root extract, coenzyme q10.@United States@MCX, 7/11, Wal-Mart@
+
+Syrup(name@price@quantity@category@ingredients@ countries@stores@)
+
+1. https://world.openfoodfacts.org/product/03431801/strawberry-syrup-hershey-s
+Strawberry Syrup - Hershey's@14$@623g@Syrup@high fructose corn syrup, water, sugar, corn syrup, contains 2% or less of : artificial flavors, citric acid, sodium benzoate, to maintain freshness, xanthan gum, artificial color (red 40)@French Polynesia, United States@
+2. https://world.openfoodfacts.org/product/3092718586782/raspberry-le-sirop
+Raspberry Le sirop - 600ml@13$@600ml@Syrup@Fruit content: 29% minimum. Sugar, glucose-fructose syrup, concentrated fruit juice 26% (15% raspberry and 11% lemon), water, coloring: elderberry juice 3%, flavoring. Contains negligible amounts of fat, saturated fatty acids, protein, salt@France, Germany, Switzerland@Kaufland@
+3. https://world.openfoodfacts.org/product/3092712200226/sirop-de-menthe-verte-teisseire
+Sirop de Menthe Verte - Teisseire@23$@750ml@Syrup@sugar, glucose-fructose syrup, water, colours: caramel (e150b), e133, natural mint flavour@Belgium, France@Lidl@
+4. https://world.openfoodfacts.org/product/3052910002121/carribean-syrup-monin
+Carribean Syrup - Monin@30$@700ml@Syrup@Sugar, water, concentrated lemon juice, natural rum flavouring, colouring agent: caramel E150d, preservative agent : E202@France@Dulcinella@
+5. https://world.openfoodfacts.org/product/3217690044291/sirop-de-grenadine-fruisco
+Sirop de grenadine - Fruisco@7$@750ml@Syrup@Glucose-fructose syrup, water, sugar, acidifier: citric acid, strawberry and elderberry concentrated juices, flavouring, colour: E150a@France@
+6. https://world.openfoodfacts.org/product/3560070339228/mint-cordial-produits-blancs
+Mint Cordial - Produits blancs - 1 l@14$@1L@Syrup@Glucose-fructose syrup, water, sugar, natural mint flavouring, colourings: caustic sulfite caramel - curcumin - brilliant blue FCF - carotenoids, safflower and lemon concentrate, antioxidant: ascorbic acid@France, Poland@Carrefour, carrefour.fr@
+7. https://world.openfoodfacts.org/product/0070491354074/cocktail-essentials-mint-syrup-master-of-mixes
+Cocktail essentials mint syrup - Master Of Mixes@4$@375ml@Syrup@High fructose corn syrup, water, sugar, natural flavor, natural spearmint oils, potassium sorbate@United States@
+8. https://world.openfoodfacts.org/product/0089036422703/strawberry-flavoring-syrup-torani
+Strawberry flavoring syrup - Torani@44$@375ml@Syrup@Pure cane sugar, water, natural flavors, citric acid, tartaric acid, sodium benzoate@United States@Profi@
+
+9. https://world.openfoodfacts.org/product/5056104531914/sugar-free-syrup-zero-golden-syrup-flavour-myprotein
+Sugar-Free Syrup Zero Golden Syrup Flavour - Myprotein - 400 ml@11$@400ml@Syrup@Water, Thickeners (Carboxymethyl Cellulose, Xanthan Gum), Acidity Regulator (Lactic Acid) Natural Flavourings, Sweetener (Sucralose), Concentrates (Lemon, Safflower, Apple, Carrot), Preservatives (Potassium Sorbate, Sodium Benzoate), Colour (Sulphite Ammonia Caramel)@France@Myprotein@
+10. https://world.openfoodfacts.org/product/3052910013776/vanilla-syrup-monin
+Vanilla Syrup - monin@3$@250ml@Syrup@Glucose-fructose syrup, water, sugar, natural mint flavouring, colourings: caustic sulfite caramel - curcumin - brilliant blue FCF - carotenoids, safflower and lemon concentrate, antioxidant: ascorbic acid@France@Lidl@
+11. https://world.openfoodfacts.org/product/3092718586799/black-cassis-current-sirup-teisseire
+Black Cassis Current Sirup - Teisseire - 600ml@7$@600ml@Syrup@Sugar, fruit juices from concentrate 30% (24% blackcurrant, 6% lemon), glucose-fructose syrup, water, flavourings, acid: citric acid, antioxidant: ascorbic acid@Denmark, France, Germany, Spain, Switzerland@Al campo, Irma.dk@
+12. https://world.openfoodfacts.org/product/0089036312653/syrup-raspberry-r-torre-co-inc
+Syrup raspberry - R. Torre & Co.Inc@33$@2821ml@Syrup@pure cane sugar, water, natural flavors, citric acid, sodium benzoate (to preserve freshness), caramel color@United States@Megaimage@
+
+Soda(name@price@quantity@category@ingredients@ countries@stores@)
+1. https://world.openfoodfacts.org/product/5449000205520/sprite-lata-coca-cola
+Sprite 330ml@3$@330ml@Soda@carbonated water, sugar, acidifiers: citric acid, sodium citrate, sweeteners: acesulfame-k, aspartame, neohesperidin dc, natural lemon-lime flavors@France, Spain@Mercadona@
+2. https://world.openfoodfacts.org/product/01208500/mountain-dew
+Mountain Dew - 355 ml@1.25$@355ml@Soda@carbonated water, high fructose corn syrup, concentrated orange juice citric acid, natural flavor, sodium benzoate (preserves freshness), caffeine, sodium citrate, gum arabic, erythorbic acid (preserves freshness) calcium disodium edta (to protect flavor), yellow 5@France, United States@Publix, Wal-Mart@
+3. https://world.openfoodfacts.org/product/5449000271013/shokata-fanta
+Shokata - Fanta@3$@330ml@Soda@Carbonated water, sugar, lemon juice from concentrate (3%), acidity regulators (E330, E296, E576), flavorings, preservatives (E202), stabilizers (E414, E445), sweeteners (acesulfame K, sucralose), antioxidants (E300), elderflower extract@Switzerland@Wal-Mart@
+
+4. https://world.openfoodfacts.org/product/8435185944009/dr-pepper
+Dr Pepper - 330 ml@4$@330ml@Soda@water, sugar, carbon dioxide, e150d, phosphoric acid, flavourings, caffeine, acesulfame k, sucralose@Australia, Belgium, France, Poland, Russia@The Reject Shop, BILLA, Żabka, Handelsplaza Venlo@
+5. https://world.openfoodfacts.org/product/9300675033848/coke-zero-coca-cola
+Coke Zero - Coca-Cola - 330 ml@2.25$@330ml@Soda@Carbonated Purified Water, Colour (Caramel E150d), Food Acids (E338, E331), Flavour, Sweeteners (E951, E950), Preservative (E211), Caffeine@Australia@Lidl@
+6. https://world.openfoodfacts.org/product/3502110008329/pepsi-1-5l
+Pepsi 1,5L@3$@1500ml@Soda@carbonated water, sugar, dye: caramel (e150d), acidifying (e333), aromas including caffeine and natural plant extracts@Belgium, France, Germany@Magasins U, Kfc, carrefour.fr
+7. https://world.openfoodfacts.org/product/3124480001429/tonic-zero-schweppes
+Tonic Zero - Schweppes - 1,5 l@4$@1500ml@Soda@Carbonated water, acidifier: citric acid, sweeteners: acesulfame K and sucralose, natural flavors, aroma: quinine@France, Switzerland@Auchan, Super U, Carrefour Market, Leclerc, Magasins U, carrefour.fr@
+Dairy(name@price@quantity@category@ingredients@ countries@stores@)
+
+1. https://world.openfoodfacts.org/product/0028000772123/low-fat-chocolate-milk-nestle
+Low fat chocolate milk - Nestle@4$@404ml@Dairy@Lowfat milk with vitamin a palmitate and vitamin d3 added, sugar less than 2% of cocoa processed with alkali, calcium carbonate, cellulose gel, modified corn starch, natural and artificial flavors, salt, cellulose gum, gellan gum, carrageenan@France, United Kingdom, United States@Lidl@
+2. https://world.openfoodfacts.org/product/5010029217933/weetabix-on-the-go-chocolate
+Weetabix on the go Chocolate - 250ml@1.45$@250ml@Dairy@Skimmed Milk (46%), Water, Maltodextrin, Milk Cream, Sugar, Modified Starch, Wheat Fibre (1.5%), Milk Protein (1.5%), Fat Reduced Cocoa Powder (1.0%), Malted Wheat Flour, Flavourings, Stabilisers (Carrageenan, Gellan), Niacin, Iron, Thiamin (B1), Riboflavin (B2), Folic acid@France, United Kingdom@Asda@
+
+
+3. https://world.openfoodfacts.org/product/0811620022118/chocolate-drink-fairlife
+Chocolate drink - fairlife@2.5$@340ml@Dairy@Lowfat Milk, Alkalized Cocoa, Natural Flavors, Microcrystalline Cellulose, Cellulose Gum, Salt, Carrageenan, Lactase Enzyme, Monk Fruit Extract, Acesulfame Potassium. Sucralose, Stevia Extract, Maltodextrin, Vitamin a (Palmitate), Vitamin D3@United States@Wal-Mart@
+
+4. https://world.openfoodfacts.org/product/5601226003469/ucal-chocolate-milk
+Ucal chocolate milk - 250 ml@2.4$@250ml@Dairy@Milk (1,1% fat), sugar, cocoa (1%), salt, stabilizer (E-407) and flavouring@France, Portugal, Switzerland@Asda@
+
+5. https://world.openfoodfacts.org/product/5760466920537/seattle-latte-starbucks
+Seattle Latte - Starbucks - 220ml@8$@220ml@Dairy@lait (contains 3,1% fat) (75%), fairtrade certified arabica coffee (water, coffee extract 0,94%), sugar (4,8%), natural coffee aroma, acidity corrector: potassium carbonates, stabilizers: carraenas, guar gum, emulsifier: mono and fatty acid diglycerides@Austria, France, Germany, Switzerland@Palace Mall@
+
+6. https://world.openfoodfacts.org/product/7610900066995/energy-milk-new-26g-high-protein-vanilla-emmi
+Energy Milk New 26g High Protein Vanilla - Emmi@2.4$@330ml@Dairy@Partly skimmed milk, milk protein, sugar, dextrose, vanilla extract, flavoring, stabilizer E331, carrageenan thickener, carrot juice concentrate, vitamins E, B6, B2, B1, D@France, Switzerland@
+7. https://world.openfoodfacts.org/product/87124903/chocomel
+Chocomel - 1l@7$@1L@Dairy@whole milk, low-fat milk, whey product, sugar, cocoa (1.7%), stabiliser carrageenan, flavouring@Germany@Kaufland, Edeka, REWE@

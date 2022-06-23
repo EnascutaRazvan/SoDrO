@@ -4,11 +4,15 @@ session_start();
 
 include("connection.php");
 include("functions.php");
+$database = new connectionDB("localhost","root","","sodrodatabase");
+$user_data = check_login($database->con);
 
-$user_data = check_login($con);
+if(!$user_data)
+header("Location: register.php");
 
-if($user_data)
-echo "Hello ".$user_data['username'];
+
+
+    
 
 ?>
 
@@ -165,116 +169,23 @@ echo "Hello ".$user_data['username'];
                     </div>
                 </form>
             </div>
-            <div id="drinks-section">
-                <div class="drink">
-                    <h3>Original Green Tea with Honey - Arizona - 500 ml</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Original Green Tea with Honey - Arizona - 500 ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half half iced tea - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Half half iced tea - Arizona.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Energy Original - Boost - 250ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/PaLma - 2 l.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Cocktail essentials mint syrup - Master Of Mixes.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Refreshing Ice Tea - Lemon Flavor - general Trading - 330 ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Original Green Tea with Honey - Arizona - 500 ml</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Original Green Tea with Honey - Arizona - 500 ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Black Cassis Current Sirup - Teisseire - 600ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Aqua Carpatica Plata 1L.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Real Leaf Honey Lemon Green Tea - 480ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Half Half Iced Tea Lemanade, Raspberry - Arizona.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Agua de coco 100% natural - Chaokoh - 330 ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Original Green Tea with Honey - Arizona - 500 ml</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Original Green Tea with Honey - Arizona - 500 ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Peach - Nestea - 1,5 L.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Red Bull Sugar Free - 250ml.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Sirop de grenadine - Fruisco.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Lemonade Tea Cooler - Dean Foods Company.jpg">
-                    </div>
-                </div>
-                <div class="drink">
-                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
-                    <div class="drink-img">
-                        <img src="assets/img/drinks/Energy water, tropical - VitaminWater.jpg">
-                    </div>
-                </div>
+            <form action="" method="GET">
+            <div id="drinks-section">  
+                <?php 
+                
+                $result = getData($database->con);
+
+                while($row = mysqli_fetch_assoc($result)){
+                    productEcho($row['id'],$row['name'],$row['price'], $row['quantity'], $row['category'], $row['ingredients'], $row['countries'], $row['stores'], $row['pathing']);
+                }
+                
+                
+                
+                
+                
+                ?>   
             </div>
+            </form>
         </div>
     </section>
 

@@ -1,11 +1,30 @@
 <?php
+class connectionDB{
+public $dbhost;
+public $dbuser;
+public $dbpass;
+public $dbname;
+public $con;
 
 
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "sodrodatabase";
+    function __construct(
+    $dbhost,
+    $dbuser,
+    $dbpass,
+    $dbname,
+    )
+    {
+     
+        $this->dbhost = $dbhost;
+        $this->dbuser = $dbuser;
+        $this->dbpass = $dbpass;
+        $this->dbname = $dbname;
+        
 
-if(!$con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname)){
-    die("failed to connect to the database");
+        $this->con = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+        
+        if(!$this->con)
+        die("connection error : ".mysqli_connect_error());
+
+    }
 }
