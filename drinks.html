@@ -1,0 +1,305 @@
+<?php
+
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+
+if($user_data)
+echo "Hello ".$user_data['username'];
+
+?>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>SoDrO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/icons/css/font-awesome.min.css">
+</head>
+
+<body id="drinks-body">
+    <section id="header">
+        <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.php">Home</a></li>
+                <li><a class="active" href="drinks.html">Drinks</a></li>
+                <li><a href="statistics.php">Statistics</a></li>
+                <li><a href="about-us.php">About-us</a></li>
+                <a href="register.php" class="signIn">Sign in</a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <script src="assets/scripts/menu.js"></script>
+            <i id="bar" class="fa fa-list-ul fa-lg" aria-hidden="true" onclick="menu()"></i>
+        </div>
+    </section>
+
+    <section id="drinks-page">
+        <div id="drinks-search">
+            <h1>Soft Drinks Search</h1>
+            <h2>Search for words present in the drinks name, categories and ingredients</h2>
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+            </form>
+        </div>
+
+        <div id="drinks-section-filter-products">
+            <div id="filters">
+
+                <form action="" method="GET">
+                    <div class="filter">
+                        <h2>Price</h2>
+                        <div class="row-start">
+                            <input type="checkbox" value="Bike">
+                            <label for="vehicle1"> 0.5 - 1</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Car">
+                            <label for="vehicle2">1 - 5</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Car">
+                            <label for="vehicle2">5 - 10</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> 10 - 20</label><br>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> 20 - 50</label><br>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> 50 - 100</label><br>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> 100+</label><br>
+                        </div>
+                    </div>
+                </form>
+
+
+                <form action="" method="GET">
+                    <div class="filter">
+                        <h2>Category</h2>
+                        <div class="row-start">
+                            <input type="checkbox" value="Bike">
+                            <label for="vehicle1"> Soda / Pop</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Car">
+                            <label for="vehicle2"> Dairy Beverage</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Car">
+                            <label for="vehicle2"> Energy Drink</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> Syrup</label><br>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> Water</label><br>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> Tea</label><br>
+                        </div>
+
+                    </div>
+                </form>
+
+
+                <form action="" method="GET">
+                    <div class="filter">
+                        <h2>Ingredients</h2>
+                        <div class="row-start">
+                            <label for="vehicle1"> + Show All Ingredients</label>
+                        </div>
+
+                    </div>
+                </form>
+
+
+                <form action="" method="GET">
+                    <div class="filter">
+                        <h2>Continent</h2>
+                        <div class="row-start">
+                            <input type="checkbox" value="Bike">
+                            <label for="vehicle1"> Europe</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Car">
+                            <label for="vehicle2"> North America</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Car">
+                            <label for="vehicle2"> South America</label>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> Africa </label><br>
+                        </div>
+                        <div class="row-start">
+                            <input type="checkbox" value="Boat">
+                            <label for="vehicle3"> Asia</label><br>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div id="drinks-section">
+                <div class="drink">
+                    <h3>Original Green Tea with Honey - Arizona - 500 ml</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Original Green Tea with Honey - Arizona - 500 ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half half iced tea - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Half half iced tea - Arizona.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Energy Original - Boost - 250ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/PaLma - 2 l.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Cocktail essentials mint syrup - Master Of Mixes.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Refreshing Ice Tea - Lemon Flavor - general Trading - 330 ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Original Green Tea with Honey - Arizona - 500 ml</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Original Green Tea with Honey - Arizona - 500 ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Black Cassis Current Sirup - Teisseire - 600ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Aqua Carpatica Plata 1L.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Real Leaf Honey Lemon Green Tea - 480ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Half Half Iced Tea Lemanade, Raspberry - Arizona.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Agua de coco 100% natural - Chaokoh - 330 ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Original Green Tea with Honey - Arizona - 500 ml</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Original Green Tea with Honey - Arizona - 500 ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Peach - Nestea - 1,5 L.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Red Bull Sugar Free - 250ml.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Sirop de grenadine - Fruisco.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Lemonade Tea Cooler - Dean Foods Company.jpg">
+                    </div>
+                </div>
+                <div class="drink">
+                    <h3>Half Half Iced Tea Lemanade, Raspberry - Arizona</h3>
+                    <div class="drink-img">
+                        <img src="assets/img/drinks/Energy water, tropical - VitaminWater.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="qr-code col">
+            <h3>SoDrO Github Page</h3>
+            <h4>Frențescu Cezar</h4>
+            <h4>Enascuță Răzvan</h4>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
+                    alt="SoDrO Logo"></a>
+        </div>
+        <div class="qr-code col">
+            <h3>SoDrO Github Page</h3>
+            <h4>Frențescu Cezar</h4>
+            <h4>Enascuță Răzvan</h4>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
+                    alt="SoDrO Logo"></a>
+        </div>
+        <div class="qr-code col">
+            <h3>SoDrO Github Page</h3>
+            <h4>Frențescu Cezar</h4>
+            <h4>Enascuță Răzvan</h4>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
+                    alt="SoDrO Logo"></a>
+        </div>
+
+    </footer>
+</body>

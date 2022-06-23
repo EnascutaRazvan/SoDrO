@@ -37,7 +37,7 @@ echo "Hello ".$user_data['username'];
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.php">Home</a></li>
-                <li><a href="drinks.php">Drinks</a></li>
+                <li><a href="drinks.html">Drinks</a></li>
                 <li><a href="statistics.php">Statistics</a></li>
                 <li><a href="about-us.php">About-us</a></li>
                 <a href="register.php" class="signIn">Sign in</a>
@@ -79,4 +79,5 @@ echo "Hello ".$user_data['username'];
         </div>
 
     </footer>
+    
 </body>

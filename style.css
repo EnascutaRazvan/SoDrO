@@ -29,6 +29,7 @@
     --black: #23262d;
     --light-black: #3c3c3c;
     --gray: #b3b3b3;
+    --lightest-gray: #f0f0f0;
     --orange: #fa9863;
     --light-orange: #FBB188;
     --orange-after: #ffc3a3;
@@ -182,6 +183,7 @@ body {
         padding: 80px 0 0 10px;
         font-size: 28px;
         transition: 0.3s;
+
     }
 
     #navbar.active {
@@ -268,7 +270,199 @@ body {
 
 
 /*----------------------------------------------------*/
-/* Header Homepage Logged In */
+/* Drinks */
+
+#drinks-body {
+    background-color: #f4f4f4;
+}
+
+#drinks-page {
+    padding: 100px;
+}
+
+#drinks-body #drinks-search {
+    margin-top: 10px;
+}
+
+#drinks-body #drinks-search h1 {
+    margin-top: -40px;
+
+    color: var(--light-black);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#drinks-body #drinks-search h2 {
+    color: var(--light-purple);
+    font-family: "BebasNeuePro-Middle";
+    font-size: 25px;
+}
+
+#drinks-body [type='text'] {
+    padding: 10px;
+    padding-left: 15px;
+    margin-top: 8px;
+    width: 96%;
+
+    font-size: 27px;
+    font-family: "BebasNeuePro-Regular";
+
+    border: none;
+    box-shadow: inset 0 0 4px;
+    color: var(--light-black);
+}
+
+#drinks-body [type='text']::placeholder {
+    color: var(--gray);
+}
+
+#drinks-section-filter-products {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+#filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40px;
+    gap: 12px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    padding: 15px;
+    width: 200px;
+
+    background-color: white;
+    box-shadow: inset 0 0 4px;
+    color: var(--light-black);
+}
+
+.filter .row-start {
+    column-gap: 15px;
+    font-size: 23px;
+}
+
+.filter h2 {
+    color: var(--light-black);
+    font-family: "BebasNeuePro-Regular";
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#drinks-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+    gap: 30px;
+}
+
+
+.drink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    cursor: pointer;
+
+    width: 23%;
+    min-width: 150px;
+    max-width: 150px;
+    height: 270px;
+    padding: 10px 12px;
+
+    border: white;
+    background-color: white;
+    border-radius: 20px;
+
+    box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.drink h3 {
+    font-family: "BebasNeuePro-Book";
+}
+
+.drink:hover {
+    transition: all 0.2s;
+    color: var(--orange);
+}
+
+.drink-img img {
+    width: 100%;
+    height: 140px;
+
+}
+
+@media (max-width:799px) {
+    #drinks-page {
+        padding: 20px;
+    }
+
+    #drinks-body #drinks-search {
+        margin-top: 40px;
+    }
+
+    #drinks-body #drinks-search h1 {
+        font-size: 40px;
+    }
+
+    #drinks-body #drinks-search h2 {
+        font-size: 23px;
+    }
+
+    #drinks-body [type='text']::placeholder {
+        font-size: 25px;
+    }
+
+
+    #drinks-section-filter-products {
+        display: flex;
+        flex-direction: column;
+        column-gap: 30px;
+    }
+
+    #filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        margin-top: 40px;
+        gap: 12px;
+    }
+
+    .filter {
+        padding: 15px;
+        width: 150px;
+        height: 240px;
+    }
+
+    .filter .row-start {
+        column-gap: 15px;
+        font-size: 20px;
+    }
+
+    .filter h2 {
+        color: var(--light-black);
+        font-family: "BebasNeuePro-Regular";
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+}
+
+
 
 
 
@@ -279,8 +473,6 @@ body {
 
 /*----------------------------------------------------*/
 /* Statistics */
-
-
 html,
 body,
 #statistics-pie {
@@ -517,7 +709,7 @@ body,
 }
 
 #signin-form {
-   user-select: none;
+    user-select: none;
 
     margin-top: 70px;
 
@@ -526,7 +718,7 @@ body,
     align-items: center;
 
 
-      height: 800px;
+    height: 800px;
     width: clamp(500px, 50%, 600px);
     z-index: 0;
 
@@ -672,7 +864,7 @@ body,
 }
 
 #signin-form #login-button:hover {
-    background: var(--lightest-purple);    
+    background: var(--lightest-purple);
 }
 
 
@@ -683,16 +875,27 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     padding-top: 30px;
     padding-left: 80px;
     padding-right: 80px;
+
+    width: 100%;
+
     background-color: rgb(255, 245, 239);
     box-shadow: 80px 40px 60px rgba(0, 0, 0, 0.2);
+
 }
 
-footer .col {
+.col {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.row-start {
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
