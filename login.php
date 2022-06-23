@@ -10,16 +10,19 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
     // something was posted
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = hash("sha256",$_POST['password']);
      
         // read to database
         $query = "select * from users where username = '$username' or email = '$username' limit 1 ";
-        $result = mysqli_query($con, $query);
+        $database = new connectionDB("localhost","root","","sodrodatabase");
+        $result = mysqli_query($database->con,$query);
+
         if($result)
         {
             if(mysqli_num_rows($result) > 0)
             {
                 $user_data = mysqli_fetch_assoc($result);
+              echo $user_data['password'];
     
                 if($user_data['password'] === $password)
                 {
