@@ -6,8 +6,6 @@ include("connection.php");
 include("functions.php");
 $database = new connectionDB("localhost","root","","sodrodatabase");
 $user_data = check_login($database->con);
-
-
 ?>
 
 
@@ -28,13 +26,13 @@ $user_data = check_login($database->con);
     <link rel="stylesheet" href="assets/icons/css/font-awesome.min.css">
 </head>
 
-<body>
+<body id="account-page-body">
 
-    <section id="header">
+<section id="header">
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="index.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="drinks.php">Drinks</a></li>
                 <li><a href="statistics.php">Statistics</a></li>
                 <li><a href="about-us.php">About-us</a></li>
@@ -53,7 +51,7 @@ $user_data = check_login($database->con);
                         <div class=\"avatar-menu\">
                             <h3>$user_username</h3>
                             <ul>
-                                <li><a href=\"account-page.php\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i>Your account</a></li>
+                            <li><a href=\"account-page.php\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i>Your account</a></li>
                                 <li><a href=\"\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>Log Out</a></li>
                             </ul>
                         </div>
@@ -71,16 +69,58 @@ $user_data = check_login($database->con);
     </section>
 
 
-
-    
-
-    <section id="hero">
-        <img class="soda" src="assets/img/sodro-soda.png" alt="Soda">
-        <h1>ORGANISE YOUR DRINKS</h1>
-        <h1 style="color:var(--light-purple)">THE SMART WAY</h1>
+    <section id="account-page">
+        <div class="account-preferences-container">
+                <h1>Drinks preferences</h1>
+                <h2>Your drinks preferences are kept in our database.</h2>
+            <div class="account-preferences-all">
+                <div class="row-start">
+                    <img class="logo" src="assets/img/account-preferrences/Sugar_Sweeteners.png" alt="SoDrO Logo">
+                    <h3> Sugar / Sweeteners</h3>
+                    <form id="sugar-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    </form>
+                    <form id="sugar-no-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    </form>
+                </div>
+                <div class="row-start">
+                    <img class="logo" src="assets/img/account-preferrences/Flavouring.png" alt="SoDrO Logo">
+                    <h3> Flavouring</h3>
+                    <form id="sugar-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    </form>
+                    <form id="sugar-no-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    </form>
+                </div>
+                <div class="row-start">
+                    <img class="logo" src="assets/img/account-preferrences/Carbonated.png" alt="SoDrO Logo">
+                    <h3> Carbonated</h3>
+                    <form id="sugar-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    </form>
+                    <form id="sugar-no-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    </form>
+                </div>
+                <div class="row-start">
+                    <img class="logo" src="assets/img/account-preferrences/Sugar_Sweeteners.png" alt="SoDrO Logo">
+                    <h3> Caffeine</h3>
+                    <form id="sugar-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    </form>
+                    <form id="sugar-no-form" method="post">
+                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer style="margin-top: 500px;">
+
+
+    <footer>
         <div class="qr-code col">
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>

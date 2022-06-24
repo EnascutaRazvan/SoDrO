@@ -1,16 +1,12 @@
 <?php
-require_once("connection.php");
-require_once("functions.php");
 
+session_start();
 
-$database = new connectionDB("localhost", "root", "", "sodrodatabase");
-
+include("connection.php");
+include("functions.php");
+$database = new connectionDB("localhost","root","","sodrodatabase");
 $user_data = check_login($database->con);
-
-
 ?>
-
-
 
 
 
@@ -35,8 +31,31 @@ $user_data = check_login($database->con);
                 <li><a href="index.php">Home</a></li>
                 <li><a href="drinks.php">Drinks</a></li>
                 <li><a href="statistics.php">Statistics</a></li>
-                <li><a class="active" href="about-us.php">About-us</a></li>
-                <a href="register.php" class="signIn">Sign in</a>
+                <li><a href="about-us.php">About-us</a></li>
+                <?php
+                    if(!$user_data){
+                        echo'<li><a href="register.php" class="signIn">Sign in</a></li>';
+                    }
+                    else{
+                        $image = $user_data["image"];
+                        $user_username = $user_data['username'];
+                        $variabila = "<div class=\"active-avatar\">
+                        <div class=\"avatar\">
+                            <img src=\"avatars/$image\" title=\"
+                            $image\">
+                        </div>
+                        <div class=\"avatar-menu\">
+                            <h3>$user_username</h3>
+                            <ul>
+                            <li><a href=\"account-page.php\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i>Your account</a></li>
+                                <li><a href=\"\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>";
+
+                        echo $variabila;    
+                    }
+                ?>
             </ul>
         </div>
         <div id="mobile">
