@@ -459,6 +459,13 @@ Drinks */
     gap: 30px;
 }
 
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
 
 .drink {
     display: flex;
@@ -497,6 +504,7 @@ Drinks */
 
 }
 
+
 @media (max-width:799px) {
     #drinks-page {
         padding: 20px;
@@ -530,7 +538,7 @@ Drinks */
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-
+        
         margin-top: 40px;
         gap: 12px;
     }
