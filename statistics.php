@@ -1,21 +1,11 @@
 <?php
- session_start();
+
+session_start();
 
 include("connection.php");
 include("functions.php");
-
-$user_data = check_login($con);
-
-if($user_data){
-    echo "Hello ".$user_data['username'];
-}
-
-else
-{
-    header("Location: register.php");
-    die;
-}
-
+$database = new connectionDB("localhost","root","","sodrodatabase");
+$user_data = check_login($database->con);
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +25,7 @@ else
 
 <body>
 
-    <section id="header">
+<section id="header">
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
@@ -43,7 +33,30 @@ else
                 <li><a href="drinks.php">Drinks</a></li>
                 <li><a class="active" href="statistics.php">Statistics</a></li>
                 <li><a href="about-us.php">About-us</a></li>
-                <a href="register.php" class="signIn">Sign in</a>
+                <?php
+                    if(!$user_data){
+                        echo'<li><a href="register.php" class="signIn">Sign in</a></li>';
+                    }
+                    else{
+                        $image = $user_data["image"];
+                        $user_username = $user_data['username'];
+                        $variabila = "<div class=\"active-avatar\">
+                        <div class=\"avatar\">
+                            <img src=\"avatars/$image\" title=\"
+                            $image\">
+                        </div>
+                        <div class=\"avatar-menu\">
+                            <h3>$user_username</h3>
+                            <ul>
+                                <li><a href=\"account-page.php\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i>Your account</a></li>
+                                <li><a href=\"\"><i class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>Log Out</a></li>
+                            </ul>
+                        </div>
+                    </div>";
+
+                        echo $variabila;    
+                    }
+                ?>
             </ul>
         </div>
         <div id="mobile">
@@ -51,6 +64,12 @@ else
             <i id="bar" class="fa fa-list-ul fa-lg" aria-hidden="true" onclick="menu()"></i>
         </div>
     </section>
+
+
+
+
+
+
     <section id="statistics">
         <h1>STATISTICS</h1>
         <div id="statistics-pie"></div>

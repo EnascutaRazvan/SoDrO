@@ -52,7 +52,7 @@ session_start();
 
 <body>
     <section id="header-signin">
-        <a href="index.php"><i class="fa fa-angle-left" style="font-size:36px"></i></a>
+        <a href="account-page.php"><i class="fa fa-angle-left" style="font-size:36px"></i></a>
         <a href="index.php"><img class="logo-sign" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <br>
     </section>
@@ -60,30 +60,21 @@ session_start();
     <form id="register-form" method="post">
         <div id="signin-form">
 
-            <div id="signin-buttons">
-                <a href="#" class="signin-button register">Register</a>
-                <a href="login.php" class="signin-button login">Login</a>
-            </div>
 
+            <label for="old-password"></label>
+            <input type="password" placeholder="Old Password" name="old-password" required>
 
-            <label for="username"></label>
-            <input type="text" placeholder="Username" name="username" required>
-
-            <label for="psw"></label>
+            <label for="new-password"></label>
             <input type="password" placeholder="Password" name="password" required>
 
-            <label for="psw-repeat"></label>
-            <input type="password" placeholder="Password (again)" name="password-repeat" required>
+            <label for="new-password-again"></label>
+            <input type="password" placeholder="New Password (again)" name="new-password-again" required>
 
-            <label for="email"></label>
-            <input type="text" placeholder="E-mail" name="email" required>
 
-            <label for="email-repeat"></label>
-            <input type="text" placeholder="E-mail (again)" name="email-repeat" required>
-
-            <p>SoDrO does not sell your <br>personal information <a href="terms-and-contitions.php">Terms & Conditions</a>
+            <p>SoDrO does not sell your <br>personal information <a href="terms-and-contitions.php">Terms &
+                    Conditions</a>
             </p>
-            <button type="submit" class="signin-button" id="create-account-button">CREATE ACCOUNT</p>
+            <button type="submit" class="signin-button" id="create-account-button">Change Password</p>
 
         </div>
         </div>
