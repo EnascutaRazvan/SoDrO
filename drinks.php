@@ -47,7 +47,7 @@ if (!$user_data)
 
 
 
-     <section id="header">
+    <section id="header">
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
@@ -56,13 +56,12 @@ if (!$user_data)
                 <li><a href="statistics.php">Statistics</a></li>
                 <li><a href="about-us.php">About-us</a></li>
                 <?php
-                    if(!$user_data){
-                        echo'<li><a href="register.php" class="signIn">Sign in</a></li>';
-                    }
-                    else{
-                        $image = $user_data["image"];
-                        $user_username = $user_data['username'];
-                        $variabila = "<div class=\"active-avatar\">
+                if (!$user_data) {
+                    echo '<li><a href="register.php" class="signIn">Sign in</a></li>';
+                } else {
+                    $image = $user_data["image"];
+                    $user_username = $user_data['username'];
+                    $variabila = "<div class=\"active-avatar\">
                         <div class=\"avatar\">
                             <img src=\"avatars/$image\" title=\"
                             $image\">
@@ -76,8 +75,8 @@ if (!$user_data)
                         </div>
                     </div>";
 
-                        echo $variabila;    
-                    }
+                    echo $variabila;
+                }
                 ?>
             </ul>
         </div>

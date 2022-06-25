@@ -4,9 +4,10 @@ session_start();
 
 include("connection.php");
 include("functions.php");
-$database = new connectionDB("localhost","root","","sodrodatabase");
+$database = new connectionDB("localhost", "root", "", "sodrodatabase");
 $user_data = check_login($database->con);
 ?>
+
 
 
 
@@ -28,7 +29,7 @@ $user_data = check_login($database->con);
 
 <body id="account-page-body">
 
-<section id="header">
+    <section id="header">
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
@@ -37,13 +38,12 @@ $user_data = check_login($database->con);
                 <li><a href="statistics.php">Statistics</a></li>
                 <li><a href="about-us.php">About-us</a></li>
                 <?php
-                    if(!$user_data){
-                        echo'<li><a href="register.php" class="signIn">Sign in</a></li>';
-                    }
-                    else{
-                        $image = $user_data["image"];
-                        $user_username = $user_data['username'];
-                        $variabila = "<div class=\"active-avatar\">
+                if (!$user_data) {
+                    echo '<li><a href="register.php" class="signIn">Sign in</a></li>';
+                } else {
+                    $image = $user_data["image"];
+                    $user_username = $user_data['username'];
+                    $variabila = "<div class=\"active-avatar\">
                         <div class=\"avatar\">
                             <img src=\"avatars/$image\" title=\"
                             $image\">
@@ -57,8 +57,8 @@ $user_data = check_login($database->con);
                         </div>
                     </div>";
 
-                        echo $variabila;    
-                    }
+                    echo $variabila;
+                }
                 ?>
             </ul>
         </div>
@@ -71,52 +71,105 @@ $user_data = check_login($database->con);
 
     <section id="account-page">
         <div class="account-preferences-container">
-                <h1>Drinks preferences</h1>
-                <h2>Your drinks preferences are kept in our database.</h2>
+            <h1>Drinks preferences</h1>
+            <h2>Your drinks preferences are kept in our database.</h2>
             <div class="account-preferences-all">
                 <div class="row-start">
                     <img class="logo" src="assets/img/account-preferrences/Sugar_Sweeteners.png" alt="SoDrO Logo">
                     <h3> Sugar / Sweeteners</h3>
                     <form id="sugar-yes-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                        <button type="submit" class="btn-preferences" name="sugar-yes-button">YES</p>
                     </form>
                     <form id="sugar-no-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                        <button type="submit" class="btn-preferences" name="sugar-no-button">NO</p>
                     </form>
                 </div>
                 <div class="row-start">
                     <img class="logo" src="assets/img/account-preferrences/Flavouring.png" alt="SoDrO Logo">
                     <h3> Flavouring</h3>
-                    <form id="sugar-yes-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    <form id="flavouring-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" name="flavouring-yes-button">YES</p>
                     </form>
-                    <form id="sugar-no-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    <form id="flavouring-no-form" method="post">
+                        <button type="submit" class="btn-preferences" name="flavouring-no-button">NO</p>
                     </form>
                 </div>
                 <div class="row-start">
                     <img class="logo" src="assets/img/account-preferrences/Carbonated.png" alt="SoDrO Logo">
                     <h3> Carbonated</h3>
-                    <form id="sugar-yes-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    <form id="carbonated-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" name="carbonated-yes-button">YES</p>
                     </form>
-                    <form id="sugar-no-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    <form id="carbonated-no-form" method="post">
+                        <button type="submit" class="btn-preferences" name="carbonated-yes-button">NO</p>
                     </form>
                 </div>
                 <div class="row-start">
                     <img class="logo" src="assets/img/account-preferrences/Sugar_Sweeteners.png" alt="SoDrO Logo">
                     <h3> Caffeine</h3>
-                    <form id="sugar-yes-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-yes-button">YES</p>
+                    <form id="caffeine-yes-form" method="post">
+                        <button type="submit" class="btn-preferences" name="caffeine-yes-button">YES</p>
                     </form>
-                    <form id="sugar-no-form" method="post">
-                        <button type="submit" class="btn-preferences" id="sugar-no-button">NO</p>
+                    <form id="caffeine-no-form" method="post">
+                        <button type="submit" class="btn-preferences" name="caffeine-no-button">NO</p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <?php
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $stringPreferences;
+
+        if (isset($_GET['sugar-yes-button'])) {
+        }
+        if (isset($_GET['sugar-no-button'])) {
+            $stringPreferences  = $stringPreferences . "1";
+            $sql = "update users set preferences = $stringPreferences";
+
+            mysqli_query($database->con, $sql);
+
+            $regexcond = trim($input);
+            $regexcond = preg_replace('!\s+!', ' ', $regexcond); //change how many space beetwen word to one space
+            $regexcond = trim($regexcond);
+            $regexcond = str_replace(" ", ".+", $regexcond); // change all space to .+ for search with regex
+            $sqlsugar = "SELECT * FROM products where ingredients like ";
+        }
+
+        if (isset($_GET['flavouring-yes-button'])) {
+        }
+        if (isset($_GET['flavouring-no-button'])) {
+            $stringPreferences = $stringPreferences . "2";
+            $sql = "update users set preferences = $stringPreferences";
+            mysqli_query($database->con, $sql);
+        }
+        if (isset($_GET['carbonated-yes-button'])) {
+        }
+        if (isset($_GET['carbonated-no-button'])) {
+            $stringPreferences = $stringPreferences . "3";
+            $sql = "update users set preferences = $stringPreferences";
+            mysqli_query($database->con, $sql);
+        }
+        if (isset($_GET['caffeine-yes-button'])) {
+        }
+        if (isset($_GET['caffeine-no-button'])) {
+            $stringPreferences = $stringPreferences . "4";
+            $sql = "update users set preferences = $stringPreferences";
+            mysqli_query($database->con, $sql);
+        }
+    }
+
+
+
+
+
+
+
+    ?>
+
 
 
 
@@ -125,22 +178,19 @@ $user_data = check_login($database->con);
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
             <h4>Enascuță Răzvan</h4>
-            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
-                    alt="SoDrO Logo"></a>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png" alt="SoDrO Logo"></a>
         </div>
         <div class="qr-code col">
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
             <h4>Enascuță Răzvan</h4>
-            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
-                    alt="SoDrO Logo"></a>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png" alt="SoDrO Logo"></a>
         </div>
         <div class="qr-code col">
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
             <h4>Enascuță Răzvan</h4>
-            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
-                    alt="SoDrO Logo"></a>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png" alt="SoDrO Logo"></a>
         </div>
 
     </footer>

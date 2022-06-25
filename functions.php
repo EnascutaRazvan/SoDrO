@@ -117,12 +117,15 @@ function getProductById($con, $product_id)
 
 
     if (mysqli_num_rows($result) > 0) {
-        return new Product($row['id'], $row['name'], $row['price'], $row['quantity'], $row['category'], $row['ingredients'], $row['countries'], $row['stores'], $row['pathing']);
+        $product = new Product($row['id'], $row['name'], $row['price'], $row['quantity'], $row['category'], $row['ingredients'], $row['countries'], $row['stores'], $row['pathing']);
+        $product->setLikes($row['likes']);
+        return $product;
     }
 }
 
 function productDetailsEcho($product)
 {
+    $id = $_REQUEST['product_id'];
 
     $element = "
     <div class=\"product-header\">
@@ -171,8 +174,16 @@ function productDetailsEcho($product)
     <div id=\"product-add-list\" class=\"product-element\">
         <h2>Add to list</h2>
         <div class=\"row-start\">
-            <h3>Countries: </h3>
-            <h4>asd</h4>
+            <form id=\"\" method=\"POST\">
+                <input type=\"submit\" name=\"addfav\" value =\"Add Favourite\">
+            </form>
+            <form id=\"\" method=\"POST\">
+                <input type=\"submit\" name=\"likeproduct\" value =\"Like\">
+            </form> 
+            <div class = \"likes\">
+               <h4>$product->product_likes
+            </div>
+            
         </div>
     </div>
 </div>
@@ -201,7 +212,7 @@ function getProductsBySearch($input, $ids)
     }
 
 
-    return $result;
+    return $result; 
 }
 
 function getProductsByFilter($filter, $id, $id_session)

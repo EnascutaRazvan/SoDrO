@@ -10,6 +10,7 @@ class product{
     public $product_countries;
     public $product_stores;
     public $product_image;
+    public $product_likes;
 
 
     //product constructor
@@ -35,7 +36,18 @@ class product{
        $this->product_countries = $product_countries;
        $this->product_stores = $product_stores;
        $this->product_image = $product_image;
+       $this->product_likes = 0;
+    }
 
+
+
+
+    function setLikes($nr){
+        $this->product_likes = $nr;
+    }
+
+    function incrementLikes(){
+        $this->product_likes += 1;
     }
 
     

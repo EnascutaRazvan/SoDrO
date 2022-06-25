@@ -4,7 +4,7 @@ session_start();
 
 include("connection.php");
 include("functions.php");
-$database = new connectionDB("localhost","root","","sodrodatabase");
+$database = new connectionDB("localhost", "root", "", "sodrodatabase");
 $user = check_login($database->con);
 ?>
 
@@ -28,7 +28,7 @@ $user = check_login($database->con);
 
 <body id="account-page-body">
 
-<section id="header">
+    <section id="header">
         <a href="#"><img class="logo" src="assets/svg/logo.svg" alt="SoDrO Logo"></a>
         <div>
             <ul id="navbar">
@@ -37,13 +37,12 @@ $user = check_login($database->con);
                 <li><a href="statistics.php">Statistics</a></li>
                 <li><a href="about-us.php">About-us</a></li>
                 <?php
-                    if(!$user){
-                        echo'<li><a href="register.php" class="signIn">Sign in</a></li>';
-                    }
-                    else{
-                        $image = $user["image"];
-                        $user_username = $user['username'];
-                        $variabila = "<div class=\"active-avatar\">
+                if (!$user) {
+                    echo '<li><a href="register.php" class="signIn">Sign in</a></li>';
+                } else {
+                    $image = $user["image"];
+                    $user_username = $user['username'];
+                    $variabila = "<div class=\"active-avatar\">
                         <div class=\"avatar\">
                             <img src=\"avatars/$image\" title=\"
                             $image\">
@@ -57,8 +56,8 @@ $user = check_login($database->con);
                         </div>
                     </div>";
 
-                        echo $variabila;    
-                    }
+                    echo $variabila;
+                }
                 ?>
             </ul>
         </div>
@@ -73,16 +72,33 @@ $user = check_login($database->con);
         <div id="about-us">
             <h1>LIST OF DRINKS</h1>
         </div>
-         
+
 
         <div id="drinks-section">
-        <?php    
-                $result = getData($database->con);
-                while($row = mysqli_fetch_assoc($result)){
-                    productEcho($row['id'],$row['name'],$row['price'], $row['quantity'], $row['category'], $row['ingredients'], $row['countries'], $row['stores'], $row['pathing']);
+            <?php
+            $currentSessionId = $_SESSION['user_id'];
+            $sql = "SELECT wishlist from users where user_id = $currentSessionId";
+
+            $result = mysqli_query($database->con, $sql);
+
+            $wishlistresult = mysqli_fetch_assoc($result);
+
+            $wishlist = explode(",", $wishlistresult['wishlist']);
+
+            foreach ($wishlist as $key) {
+                if ($key != "") {
+                    $sql = "SELECT * FROM products where id = $key";
+                    $row = mysqli_fetch_assoc(mysqli_query($database->con, $sql));
+                    productEcho($row['id'], $row['name'], $row['price'], $row['quantity'], $row['category'], $row['ingredients'], $row['countries'], $row['stores'], $row['pathing']);
                 }
-                ?> 
-            
+            }
+
+
+
+
+
+            ?>
+
         </div>
     </section>
 
@@ -93,22 +109,19 @@ $user = check_login($database->con);
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
             <h4>Enascuță Răzvan</h4>
-            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
-                    alt="SoDrO Logo"></a>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png" alt="SoDrO Logo"></a>
         </div>
         <div class="qr-code col">
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
             <h4>Enascuță Răzvan</h4>
-            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
-                    alt="SoDrO Logo"></a>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png" alt="SoDrO Logo"></a>
         </div>
         <div class="qr-code col">
             <h3>SoDrO Github Page</h3>
             <h4>Frențescu Cezar</h4>
             <h4>Enascuță Răzvan</h4>
-            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png"
-                    alt="SoDrO Logo"></a>
+            <a href="https://github.com/FrentescuCezar/TehnologiiWeb/"><img class="logo" src="assets/img/QR-code.png" alt="SoDrO Logo"></a>
         </div>
 
     </footer>
