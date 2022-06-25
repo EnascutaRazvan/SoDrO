@@ -1,0 +1,1930 @@
+@font-face {
+    font-family: "BebasNeuePro-Book";
+    src: url("assets/fonts/BebasNeuePro-Book.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeuePro-Middle";
+    src: url("assets/fonts/BebasNeuePro-Middle.ttf");
+}
+
+
+@font-face {
+    font-family: "BebasNeuePro-Regular";
+    src: url("assets/fonts/BebasNeuePro-Regular.ttf");
+}
+
+@font-face {
+    font-family: "BebasNeuePro-Bold";
+    src: url("assets/fonts/BebasNeuePro-Bold.ttf");
+}
+
+
+@font-face {
+    font-family: "BarlowCondensed-Bold";
+    src: url("assets/fonts/BarlowCondensed-Bold.ttf");
+}
+
+:root {
+    --black: #23262d;
+    --light-black: #3c3c3c;
+    --gray: #b3b3b3;
+    --lightest-gray: #f0f0f0;
+    --orange: #fa9863;
+    --light-orange: #FBB188;
+    --orange-after: #ffc3a3;
+    --purple: #42134D;
+    --light-purple: #5a3292;
+    --lighter-purple: #784494;
+    --lightest-purple: rgb(159, 98, 192);
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: var(--black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "BebasNeuePro-Regular";
+}
+
+p {
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    margin-top: 150px;
+}
+
+.section-m1 {
+    padding: 40px 80px;
+}
+
+body {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Header Homepage */
+
+.logo {
+    position: relative;
+    padding-top: 20px;
+    height: 65px;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: white;
+
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+#navbar li {
+    padding: 0 10px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: var(--purple);
+    text-align: center;
+}
+
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: var(--orange);
+    transition: all 0.1s;
+}
+
+#navbar li a.active::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: var(--orange-after);
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+
+#navbar a.signIn {
+    /*letter-spacing: -0.15px;*/
+    padding: 0.1em 0.9em;
+    margin-left: 10px;
+    border: 0.1em solid rgba(255, 255, 255, 0);
+    border-radius: 0.5em 0.5em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #714491;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+#navbar a.signIn:hover {
+    background-color: #FBB188;
+    transition: all 0.2s;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+@media (max-width:799px) {
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 50px;
+        background: white;
+
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 200px;
+        background-color: white;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.2);
+        padding: 80px 0 0 10px;
+        font-size: 28px;
+        transition: 0.3s;
+
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #navbar li a {
+        text-decoration: none;
+        color: var(--purple);
+        text-align: center;
+        font-size: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile .fa fa-list-ul {
+        height: 20px;
+    }
+
+}
+
+
+.active-avatar {
+    position: relative;
+    margin-left: 10px;
+
+    font-family: "BebasNeuePro-Book";
+}
+
+.active-avatar .avatar {
+    position: relative;
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+    border: 4px solid var(--light-purple);
+    border-radius: 1000px;
+
+
+}
+
+.active-avatar img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-color: var(--light-purple);
+    border-width: 10px;
+}
+
+#avatar-menu-id {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    top: 80px;
+    right: -10px;
+
+    background: var(--light-orange);
+    width: 200px;
+    height: 250px;
+
+    box-shadow: 4px 7px 3px -4px rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+    width: 0px;
+
+}
+
+
+#avatar-menu-id.active {
+    width: 200px;
+}
+
+#avatar-menu-id.active h3 {
+    font-size: 23px;
+}
+
+#avatar-menu-id.active::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 28px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--light-orange);
+    transform: rotate(45deg);
+}
+
+#avatar-menu-id.active i {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: var(--light-purple);
+}
+
+#avatar-menu-id.active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    margin-left: 10px;
+    font-size: 25px;
+    color: var(--light-purple);
+}
+
+#avatar-menu-id.active #logoutform input {
+    font-family: "BebasNeuePro-Bold";
+    color: var(--light-purple);
+    font-size: 23px;
+    background-color: var(--light-orange);
+    color: var(--purple);
+    cursor: pointer;
+}
+
+#avatar-menu-id.active #logoutform input:hover {
+    color: var(--orange);
+}
+
+#logoutform input {
+    font-size: 0px;
+    border: none;
+    font-family: "BebasNeuePro-Middle";
+    color: var(--light-purple);
+
+}
+
+#filterinput {
+    background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+
+}
+
+#filterinput input {
+    font-size: 25px;
+    border: none;
+    font-family: "BebasNeuePro-Regular";
+    color: white;
+    cursor: pointer;
+    border-radius: 10%;
+    background-color: transparent;
+}
+
+#avatar-menu-id::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 28px;
+    width: 0px;
+    height: 0px;
+    background-color: var(--light-orange);
+    transform: rotate(45deg);
+}
+
+#avatar-menu-id h3 {
+    width: 100%;
+
+    text-align: center;
+    font-size: 0px;
+    font-family: "BebasNeuePro-Middle";
+    color: var(--light-purple);
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#avatar-menu-id i {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    color: var(--light-purple);
+}
+
+#avatar-menu-id ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    margin-left: 10px;
+    font-size: 0px;
+    color: var(--light-purple);
+}
+
+#avatar-menu-id .fa {
+    font-size: 0px;
+}
+
+#avatar-menu-id.active .fa {
+    font-size: 30px;
+}
+
+#avatar-menu-id.active .youraccount {
+    font-size: 25px;
+}
+
+#avatar-menu-id .youraccount {
+    font-size: 0px;
+}
+
+#avatar-menu-id button {
+    font-family: "BebasNeuePro-Middle";
+    color: var(--light-purple);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Account-page*/
+#account-page-body {
+    background-color: #f4f4f4;
+}
+
+#account-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.account-page-container {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    background-color: white;
+    width: 70%;
+    min-width: 400px;
+    padding-bottom: 100px;
+}
+
+.account-page-container form {
+    margin-top: 50px;
+}
+
+.upload {
+    width: 125px;
+    position: relative;
+    margin: auto;
+}
+
+.upload img {
+    border-radius: 50%;
+    border: 8px solid #DCDCDC;
+}
+
+.upload .round {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--lightest-purple);
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.upload .round:hover {
+    background: var(--orange);
+}
+
+.upload .round input[type="file"] {
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+}
+
+.upload .round i {
+    padding-top: 8px;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+.account-page-container h1 {
+    font-size: 35px;
+    margin-bottom: -30px;
+}
+
+#account-all-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin-top: 100px;
+
+    gap: 80px;
+
+    text-align: center;
+}
+
+.account-option h2 {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 20px;
+    font-family: "BebasNeuePro-Book";
+}
+
+.account-option img {
+    height: 50px;
+}
+
+.account-option a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.account-option a:hover {
+    transition: 0.1s;
+    color: var(--orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Account preferences */
+
+.account-preferences-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: white;
+    width: 70%;
+    min-width: 400px;
+    padding-bottom: 100px;
+
+    padding: 50px;
+}
+
+.account-preferences-all {
+    align-self: flex-start;
+    margin-top: 60px;
+}
+
+.account-preferences-container h1 {
+    font-size: 40px;
+
+}
+
+.account-preferences-container .row-start {
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.account-preferences-container h2 {
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: "BebasNeuePro-Book";
+}
+
+
+.account-preferences-container .row-start h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    font-family: "BebasNeuePro-Book";
+}
+
+.btn-preferences {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: var(--lighter-purple);
+    border-color: transparent;
+
+    font-family: "BebasNeuePro-Middle";
+    font-size: 25px;
+    color: white;
+
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-preferences:hover {
+    transition: 0.1s;
+    background: var(--light-orange);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Home Page */
+
+#hero {
+    padding-top: 30px;
+}
+
+#hero h1 {
+    position: relative;
+    line-height: 120%;
+    font-family: "BarlowCondensed-Bold";
+    font-size: 60px;
+    text-align: center;
+    color: var(--black);
+    z-index: 1;
+}
+
+#hero img {
+    user-select: none;
+    pointer-events: none;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+
+    width: clamp(300px, 30%, 400px);
+    z-index: 0;
+}
+
+@media (max-width:799px) {
+    #hero img {
+        pointer-events: all;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 70px;
+
+        width: clamp(300px, 30%, 400px);
+        z-index: 0;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Drinks */
+
+#drinks-body {
+    background-color: #f4f4f4;
+}
+
+#drinks-page {
+    padding: 100px;
+    background-color: #f4f4f4;
+}
+
+#drinks-body #drinks-search {
+    margin-top: 10px;
+}
+
+#drinks-body #drinks-search h1 {
+    margin-top: -40px;
+
+    color: var(--light-black);
+    font-size: 60px;
+    font-weight: 700;
+}
+
+#drinks-body #drinks-search h2 {
+    color: var(--light-purple);
+    font-family: "BebasNeuePro-Middle";
+    font-size: 25px;
+}
+
+#drinks-body [type='text'] {
+    padding: 10px;
+    padding-left: 15px;
+    margin-top: 8px;
+    width: 98%;
+
+    font-size: 27px;
+    font-family: "BebasNeuePro-Regular";
+
+    border: none;
+    box-shadow: inset 0 0 4px;
+    color: var(--light-black);
+}
+
+#drinks-body [type='text']::placeholder {
+    color: var(--gray);
+}
+
+#drinks-section-filter-products {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+#filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40px;
+    gap: 12px;
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    padding: 15px;
+    width: 200px;
+
+    background-color: white;
+    box-shadow: inset 0 0 4px;
+    color: var(--light-black);
+}
+
+.filter .row-start {
+    column-gap: 15px;
+    font-size: 23px;
+}
+
+.filter h2 {
+    color: var(--light-black);
+    font-family: "BebasNeuePro-Regular";
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+#drinks-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+    gap: 30px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.drink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+
+    cursor: pointer;
+
+    width: 23%;
+    min-width: 150px;
+    max-width: 150px;
+    height: 270px;
+    padding: 10px 12px;
+
+    border: white;
+    background-color: white;
+    border-radius: 20px;
+
+    box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.drink h3 {
+    font-family: "BebasNeuePro-Book";
+}
+
+.drink:hover {
+    transition: all 0.2s;
+    color: var(--orange);
+}
+
+.drink-img img {
+    width: 100%;
+    height: 140px;
+
+}
+
+
+@media (max-width:799px) {
+    #drinks-page {
+        padding: 20px;
+    }
+
+    #drinks-body #drinks-search {
+        margin-top: 40px;
+    }
+
+    #drinks-body #drinks-search h1 {
+        font-size: 40px;
+    }
+
+    #drinks-body #drinks-search h2 {
+        font-size: 23px;
+    }
+
+    #drinks-body [type='text']::placeholder {
+        font-size: 25px;
+    }
+
+
+    #drinks-section-filter-products {
+        display: flex;
+        flex-direction: column;
+        column-gap: 30px;
+    }
+
+    #filters {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        margin-top: 40px;
+        gap: 12px;
+    }
+
+    .filter {
+        padding: 15px;
+        width: 150px;
+        height: 240px;
+    }
+
+    .filter .row-start {
+        column-gap: 15px;
+        font-size: 20px;
+    }
+
+    .filter h2 {
+        color: var(--light-black);
+        font-family: "BebasNeuePro-Regular";
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Product Page */
+
+#products-body {
+    background-color: #f4f4f4;
+}
+
+#product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f4f4f4;
+    padding: 40px;
+}
+
+.product-page-container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    width: 70%;
+    min-width: 500px;
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(297deg, rgba(232, 119, 174, 1) 32%, rgba(124, 115, 243, 1) 61%);
+    height: 100px;
+}
+
+.product-header h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+
+.product-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    text-align: center;
+
+    cursor: pointer;
+
+    width: 23%;
+    min-width: 360px;
+    max-width: 200px;
+    height: 380px;
+    padding: 10px 12px;
+
+    border: white;
+    background-color: white;
+    border-radius: 20px;
+
+}
+
+.product-img img {
+    width: 100%;
+    height: 300px;
+
+}
+
+.product-element {
+    margin-bottom: 80px;
+}
+
+.product-elements .row-start {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    width: 80%;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    gap: 10px;
+
+
+    text-align: start;
+    color: var(--light-black);
+}
+
+.product-elements {
+    padding-left: 50px;
+}
+
+.product-elements h2 {
+    font-size: 40px;
+    color: var(--light-purple);
+}
+
+.product-elements h3 {
+    font-size: 30px;
+    font-family: "BebasNeuePro-Middle";
+}
+
+.product-elements h4 {
+    font-size: 30px;
+    font-family: "BebasNeuePro-Book";
+}
+
+#productbutton {
+    padding: 0.1em 0.5em;
+    border-radius: 2em 2em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+    cursor: pointer;
+
+    font-family: "BebasNeuePro-Bold";
+    font-size: 30px;
+    text-align: center;
+
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+#productbutton input {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 25px;
+    color: white;
+    font-family: "BebasNeuePro-BOLD";
+    cursor: pointer;
+
+}
+
+.likes {
+    margin-left: 40px;
+    margin-top: -5px;
+}
+
+.likes h4 {
+    font-size: 40px;
+    color: var(--lightest-purple);
+}
+
+
+#productbutton:hover {
+    background: linear-gradient(254deg, rgba(243, 207, 115, 1) 0%, rgba(232, 119, 174, 1) 100%);
+}
+
+#product-characteristics {
+    margin-bottom: 50px;
+}
+
+@media (max-width:799px) {
+    .product-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(297deg, rgba(232, 119, 174, 1) 32%, rgba(124, 115, 243, 1) 61%);
+        height: 100px;
+    }
+
+    .product-header h1 {
+        text-align: center;
+        color: white;
+        font-size: 35px;
+    }
+
+    .product-page-container {
+        display: flex;
+        flex-direction: column;
+
+        background-color: white;
+        width: 70%;
+        min-width: 400px;
+    }
+
+    #productbutton {
+        padding: 0.1em 0.2em;
+        border-radius: 2em 2em;
+        text-decoration: none;
+        color: #FFFFFF;
+        background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+        cursor: pointer;
+
+        font-family: "BebasNeuePro-Bold";
+        font-size: 30px;
+        text-align: center;
+
+        margin-bottom: 35px;
+        cursor: pointer;
+    }
+
+    #productbutton input {
+        background-color: transparent;
+        border-color: transparent;
+        font-size: 25px;
+        color: white;
+        font-family: "BebasNeuePro-Regular";
+        cursor: pointer;
+
+    }
+
+    .likes {
+        margin-left: 10px;
+        margin-top: 7px;
+    }
+
+    .likes h4 {
+        font-size: 40px;
+        color: var(--lightest-purple);
+    }
+
+    .product-elements h3 {
+        font-size: 25px;
+        font-family: "BebasNeuePro-Middle";
+    }
+
+    .product-elements h4 {
+        font-size: 25px;
+        font-family: "BebasNeuePro-Book";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/Statistics */
+
+html,
+body,
+#statistics-pie {
+    margin-top: 100px;
+    height: 400px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+
+}
+
+#statistics-pie-mobile {
+    display: none;
+}
+
+
+@media (max-width:799px) {
+    #statistics-pie {
+        display: none;
+    }
+
+    #statistics-pie-mobile {
+        display: flex;
+        margin-top: 100px;
+        height: 400px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+
+    }
+}
+
+#statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#statistics h1 {
+    position: relative;
+    padding-top: 3%;
+    line-height: 120%;
+    font-family: "BarlowCondensed-Bold";
+    font-size: 60px;
+    text-align: center;
+    color: var(--orange);
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+#statistics h3 {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: start;
+    font-size: 40px;
+    font-family: "BebasNeuePro-Book";
+    font-weight: 100;
+
+
+    width: 70%;
+    z-index: 2;
+
+}
+
+#statistics .statistics-img {
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+#statistics hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+#statistics #SVGorCSV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+
+#statistics .statistics-button {
+    padding: 0.1em 1.5em;
+    border-radius: 2em 2em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+    cursor: pointer;
+
+    font-family: "BebasNeuePro-Bold";
+    font-size: 40px;
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+
+#statistics .statistics-button:hover {
+    background: linear-gradient(254deg, rgba(243, 207, 115, 1) 0%, rgba(232, 119, 174, 1) 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+About-Us Page */
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-us h1 {
+    position: relative;
+    padding-top: 3%;
+    line-height: 120%;
+    font-family: "BarlowCondensed-Bold";
+    font-size: 60px;
+    text-align: center;
+    color: var(--orange);
+    z-index: 1;
+    padding-bottom: 30px;
+}
+
+#about-us h3 {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+    font-weight: lighter;
+    width: 70%;
+    z-index: 2;
+
+}
+
+#about-us .about-img {
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+#about-us .map {
+    border: var(--orange);
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 7px;
+}
+
+#about-us .map-mobile {
+    display: none;
+}
+
+@media (max-width:799px) {
+    #about-us h1 {
+        font-size: 45px;
+    }
+
+    #about-us h3 {
+        font-size: 25px;
+    }
+
+    #about-us .map {
+        display: none;
+        width: 100%;
+    }
+
+    #about-us .map-mobile {
+        display: flex;
+        border: var(--orange);
+        border-style: solid;
+        border-radius: 10px;
+        border-width: 7px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Register Page */
+
+#header-signin {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    top: 0;
+    left: 0;
+    padding: 20px 80px;
+
+    background-color: var(--light-orange);
+    width: 100%;
+
+    z-index: 999;
+}
+
+
+#header-signin .logo-sign {
+    height: 65px;
+    margin-right: 30px;
+}
+
+#registerform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#signin-form {
+    user-select: none;
+
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    height: 800px;
+    width: clamp(500px, 50%, 600px);
+    z-index: 0;
+
+    border-radius: 50px 50px 50px 50px;
+    background-color: #FBB188;
+    margin-bottom: 100px;
+
+
+}
+
+#signin-form .angle2 {
+    display: none;
+}
+
+#signin-form [type='text'],
+[type='password'] {
+    margin-top: 40px;
+    padding: 10px;
+    padding-left: 20px;
+    width: 350px;
+    box-shadow: 0px 3px 3px -1px rgba(0, 0, 0, 0.47);
+    border-radius: 10px;
+    border-color: transparent;
+
+    font-size: 27px;
+    color: var(--gray);
+}
+
+#signin-form [type='text']::placeholder,
+[type='password']::placeholder {
+    color: var(--gray);
+}
+
+#signin-form [type='checkbox'] {
+    position: relative;
+    cursor: pointer;
+    box-shadow: none;
+    width: 20px;
+    height: 30px;
+}
+
+#signin-form #signin-buttons {
+    margin-top: 60px;
+    margin-bottom: 25px;
+
+}
+
+#signin-form .signin-button {
+    padding: 4px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: linear-gradient(122deg, rgba(124, 115, 243, 1) 0%, rgba(232, 119, 174, 1) 100%);
+
+    font-family: "BebasNeuePro-Bold";
+    font-size: 27px;
+    text-align: center;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#signin-form .register {
+    padding: 4px 20px;
+    background: var(--lighter-purple);
+}
+
+#signin-form .register:hover {
+    background: var(--lightest-purple);
+}
+
+#signin-form .register2 {
+    padding: 4px 20px;
+    background: #FFFFFF;
+    color: var(--lighter-purple);
+}
+
+#signin-form .register2:hover {
+    background: #f8f4ff;
+}
+
+#signin-form .login {
+    background: #FFFFFF;
+    color: var(--lighter-purple);
+}
+
+#signin-form .login:hover {
+    background: #f8f4ff;
+}
+
+#signin-form .login2 {
+    background: var(--lighter-purple);
+}
+
+#signin-form .login2:hover {
+    background: var(--lightest-purple);
+}
+
+#signin-form p {
+    font-size: 25px;
+    text-align: center;
+    font-family: "BebasNeuePro-Middle";
+    margin-top: 40px;
+    margin-bottom: -px;
+}
+
+#signin-form #create-account-button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: var(--lighter-purple);
+    border-color: transparent;
+
+    font-family: "BebasNeuePro-Regular";
+    font-size: 27px;
+    height: 60px;
+    text-align: center;
+}
+
+#signin-form #create-account-button:hover {
+    background: var(--lightest-purple);
+}
+
+#signin-form #login-button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background: var(--lighter-purple);
+    border-color: transparent;
+
+    font-family: "BebasNeuePro-Regular";
+    font-size: 27px;
+    height: 60px;
+    text-align: center;
+}
+
+#signin-form #login-button:hover {
+    background: var(--lightest-purple);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/* 
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding-top: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+
+    width: 100%;
+
+    background-color: rgb(255, 245, 239);
+    box-shadow: 80px 40px 60px rgba(0, 0, 0, 0.2);
+
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row-start {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .qr-code h3 {
+    color: var(--light-black);
+    font-size: 37px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+footer .qr-code h4 {
+    color: #656565;
+    font-size: 25px;
+    font-weight: 10;
+}
+
+footer .qr-code .logo {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width:799px) {
+    footer footer .qr-code h3 {
+        color: var(--light-black);
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    footer .qr-code h4 {
+        color: #656565;
+        font-size: 25px;
+        font-weight: 10;
+    }
+
+    footer .qr-code .logo {
+        height: 200px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+/
+Terms And Conditions Page */
+
+#terms-and-conditions {
+    padding: 80px;
+}
+
+#terms-title {
+    margin-bottom: 40px;
+}
+
+#terms-and-conditions h1 {
+    font-family: "BarlowCondensed-Bold";
+    color: var(--orange);
+
+    margin-bottom: -25px;
+}
+
+#terms-and-conditions h2 {
+    font-size: 25px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+#terms-and-conditions h3 {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.h3-text {
+    font-family: "BebasNeuePro-Book";
+}
